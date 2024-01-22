@@ -1,0 +1,59 @@
+name: pankaj_s_application6
+description: A new Flutter project.
+version: 1.0.0+1
+environment: 
+  sdk: '>=2.12.0 <3.0.0'
+dependencies: 
+  flutter: 
+    sdk: flutter
+  cached_network_image: ^3.3.0
+  flutter_svg: ^2.0.9
+  flutter_svg_provider: ^1.0.7
+  intl: ^0.18.0
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+flutter: 
+  uses-material-design: true
+  assets: 
+    - assets/
+    - assets/images/
+  fonts: 
+    - family: Kalam
+      fonts: 
+        - asset: assets/fonts/KalamBold.ttf
+          weight: 700
+    - family: Rubik Moonrocks
+      fonts: 
+        - asset: assets/fonts/RubikMoonrocksRegular.ttf
+          weight: 400
+    - family: Inter
+      fonts: 
+        - asset: assets/fonts/InterBold.ttf
+          weight: 700
+        - asset: assets/fonts/InterRegular.ttf
+          weight: 400
+    - family: Josefin Sans
+      fonts: 
+        - asset: assets/fonts/JosefinSansRomanRegular.ttf
+          weight: 400
+    - family: Kaushan Script
+      fonts: 
+        - asset: assets/fonts/KaushanScriptRegular.ttf
+          weight: 400
+    - family: Inika
+      fonts: 
+        - asset: assets/fonts/InikaBold.ttf
+          weight: 700
+    - family: Josefin Slab
+      fonts: 
+        - asset: assets/fonts/JosefinSlabRomanBold.ttf
+          weight: 700
+    - family: Knewave
+      fonts: 
+        - asset: assets/fonts/KnewaveRegular.ttf
+          weight: 400
+    - family: Salsa
+      fonts: 
+        - asset: assets/fonts/SalsaRegular.ttf
+          weight: 400
