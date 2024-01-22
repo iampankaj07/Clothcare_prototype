@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pankaj_s_application6/core/app_export.dart';
-import 'package:pankaj_s_application6/widgets/app_bar/custom_app_bar.dart';
-import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
-import 'package:pankaj_s_application6/widgets/custom_elevated_button.dart';
-import 'package:pankaj_s_application6/widgets/custom_text_form_field.dart';
 
 class DashboardScreen extends StatelessWidget {
   TextEditingController searchController = TextEditingController();
