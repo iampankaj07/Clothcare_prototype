@@ -103,11 +103,15 @@ class CustomRadioButton extends StatelessWidget {
         height: iconSize ?? 15.h,
         width: iconSize ?? 15.h,
         child: Radio<String>(
-          visualDensity: VisualDensity(
-            vertical: -4,
-            horizontal: -4,
-          ),
+          // visualDensity: VisualDensity(
+          //   vertical: -4,
+          //   horizontal: -4,
+          // ),
           value: value ?? "",
+          fillColor: MaterialStateProperty.resolveWith<Color>(
+              (Set<MaterialState> states) {
+            return Colors.black;
+          }),
           groupValue: groupValue,
           onChanged: (value) {
             onChange(value!);

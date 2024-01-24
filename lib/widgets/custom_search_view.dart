@@ -104,7 +104,7 @@ class CustomSearchView extends StatelessWidget {
         hintStyle: hintStyle,
         prefixIcon: Padding(
           padding: EdgeInsets.all(
-            15.h,
+            10.h,
           ),
           child: Icon(
             Icons.search,
@@ -113,7 +113,7 @@ class CustomSearchView extends StatelessWidget {
         ),
         prefixIconConstraints: prefixConstraints ??
             BoxConstraints(
-              maxHeight: 25.v,
+              maxHeight: 40.v,
             ),
         suffixIcon: suffix ??
             Container(
@@ -129,7 +129,7 @@ class CustomSearchView extends StatelessWidget {
             ),
         suffixIconConstraints: suffixConstraints ??
             BoxConstraints(
-              maxHeight: 25.v,
+              maxHeight: 10.v,
             ),
         isDense: true,
         contentPadding: contentPadding,

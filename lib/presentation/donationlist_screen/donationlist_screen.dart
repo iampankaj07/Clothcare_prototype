@@ -80,175 +80,72 @@ class DonationlistScreen extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.only(left: 15.h),
                           child: CustomSearchView(
-                            width: 220.h,
+                            // width: 220.h,
                             controller: searchController,
                           ),
                         ),
                         SizedBox(height: 17.v),
-                        SizedBox(
-                          height: 660.v,
-                          width: 377.h,
-                          child: Stack(
-                            alignment: Alignment.center,
+                        Container(
+                          color: appTheme.blueGray100,
+                          // padding: EdgeInsets.all(20.0),
+                          child: Table(
+                            columnWidths: {
+                              0: FlexColumnWidth(1),
+                              1: FlexColumnWidth(1),
+                              2: FlexColumnWidth(2),
+                              3: FlexColumnWidth(2),
+                              4: FlexColumnWidth(2),
+                            },
+                            border: TableBorder.all(color: Colors.black),
                             children: [
-                              Align(
-                                alignment: Alignment.center,
-                                child: Container(
-                                  margin: EdgeInsets.only(
-                                    left: 3.h,
-                                    right: 1.h,
-                                  ),
-                                  padding:
-                                      EdgeInsets.symmetric(horizontal: 1.h),
-                                  decoration:
-                                      AppDecoration.fillBluegray100.copyWith(
-                                    borderRadius:
-                                        BorderRadiusStyle.roundedBorder5,
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                          top: 9.v,
-                                          bottom: 631.v,
-                                        ),
-                                        child: Text(
-                                          "S.N.",
-                                          style: theme.textTheme.titleSmall,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(left: 4.h),
-                                        child: SizedBox(
-                                          height: 659.v,
-                                          child: VerticalDivider(
-                                            width: 1.h,
-                                            thickness: 1.v,
-                                            color: appTheme.black90002,
-                                            indent: 1.h,
-                                            endIndent: 3.h,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                          left: 12.h,
-                                          top: 9.v,
-                                          bottom: 631.v,
-                                        ),
-                                        child: Text(
-                                          "ID",
-                                          style: theme.textTheme.titleSmall,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(left: 7.h),
-                                        child: SizedBox(
-                                          height: 660.v,
-                                          child: VerticalDivider(
-                                            width: 1.h,
-                                            thickness: 1.v,
-                                            // indent: 1.h,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                          left: 4.h,
-                                          top: 8.v,
-                                          bottom: 631.v,
-                                        ),
-                                        child: Text(
-                                          "Donation Item",
-                                          style: theme.textTheme.titleSmall,
-                                        ),
-                                      ),
-                                      Spacer(),
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                          top: 7.v,
-                                          right: 18.h,
-                                          bottom: 631.v,
-                                        ),
-                                        child: Text(
-                                          "Notes",
-                                          style: theme.textTheme.titleSmall,
-                                        ),
-                                      ),
-                                    ],
+                              TableRow(children: [
+                                Center(
+                                  child: Text(
+                                    "S.N.",
+                                    style: theme.textTheme.titleSmall,
                                   ),
                                 ),
-                              ),
-                              Align(
-                                alignment: Alignment.center,
-                                child: SizedBox(
-                                  height: 659.v,
-                                  child: VerticalDivider(
-                                    width: 1.h,
-                                    thickness: 1.v,
+                                Center(
+                                  child: Text(
+                                    "ID",
+                                    style: theme.textTheme.titleSmall,
                                   ),
                                 ),
-                              ),
-                              Align(
-                                alignment: Alignment.centerRight,
-                                child: Padding(
-                                  padding: EdgeInsets.only(right: 72.h),
-                                  child: SizedBox(
-                                    height: 658.v,
-                                    child: VerticalDivider(
-                                      width: 1.h,
-                                      thickness: 1.v,
-                                    ),
+                                Center(
+                                  child: Text(
+                                    "Donation Item",
+                                    textAlign: TextAlign.center,
+                                    style: theme.textTheme.titleSmall,
                                   ),
                                 ),
-                              ),
-                              Align(
-                                alignment: Alignment.topCenter,
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(right: 73.h),
-                                      child: Text(
-                                        "Donation Date",
-                                        style: theme.textTheme.titleSmall,
-                                      ),
-                                    ),
-                                    SizedBox(height: 12.v),
-                                    Divider(
-                                      thickness: 1,
-                                    ),
-                                    SizedBox(height: 31.v),
-                                    Divider(
-                                      thickness: 1,
-                                    ),
-                                    SizedBox(height: 31.v),
-                                    Divider(
-                                      thickness: 1,
-                                    ),
-                                    SizedBox(height: 31.v),
-                                    Divider(
-                                      thickness: 1,
-                                    ),
-                                    SizedBox(height: 31.v),
-                                    Divider(
-                                      thickness: 1,
-                                    ),
-                                    SizedBox(height: 31.v),
-                                    Divider(
-                                      thickness: 1,
-                                    ),
-                                    // CustomImageView(
-                                    //   imagePath: ImageConstant.imgLine20,
-                                    //   height: 309.v,
-                                    //   width: 376.h,
-                                    // ),
-                                  ],
+                                Center(
+                                  child: Text(
+                                    "Donation Date",
+                                    textAlign: TextAlign.center,
+                                    style: theme.textTheme.titleSmall,
+                                  ),
                                 ),
-                              ),
+                                Center(
+                                  child: Text(
+                                    "Notes",
+                                    style: theme.textTheme.titleSmall,
+                                  ),
+                                ),
+                              ]),
+                              TableRow(children: [
+                                Center(child: Text('1')),
+                                Center(child: Text('0101')),
+                                Center(child: Text('Clothes')),
+                                Center(child: Text('2024-02-02')),
+                                Center(child: Text('donated')),
+                              ]),
+                              TableRow(children: [
+                                Center(child: Text('2')),
+                                Center(child: Text('033')),
+                                Center(child: Text('Clothes')),
+                                Center(child: Text('2024-02-02')),
+                                Center(child: Text('donated')),
+                              ])
                             ],
                           ),
                         ),

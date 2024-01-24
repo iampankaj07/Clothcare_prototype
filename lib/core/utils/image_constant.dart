@@ -4,6 +4,10 @@ class ImageConstant {
 
   // RegistrationScreen images
   static String imgSettings = '$imagePath/img_settings.svg';
+  static String dashimg1 = '$imagePath/1.webp';
+  static String dashimg2 = '$imagePath/2.webp';
+  static String dashimg3 = '$imagePath/download.png';
+  static String dashimg4 = '$imagePath/imaged.jpeg';
 
   // DonationReqFormScreen images
   static String imgEdit = '$imagePath/img_edit.svg';

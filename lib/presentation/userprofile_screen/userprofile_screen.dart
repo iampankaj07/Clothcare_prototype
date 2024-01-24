@@ -10,15 +10,22 @@ class UserprofileScreen extends StatelessWidget {
           key: key,
         );
 
-  TextEditingController fullNameEditTextController = TextEditingController();
+  TextEditingController fullNameEditTextController =
+      TextEditingController(text: "Jeshika rai");
 
-  TextEditingController emailEditTextController = TextEditingController();
+  TextEditingController emailEditTextController =
+      TextEditingController(text: "Jeshika@gmail.com");
 
-  TextEditingController birthdayEditTextController = TextEditingController();
+  TextEditingController birthdayEditTextController =
+      TextEditingController(text: "2000-01-10");
 
-  TextEditingController homeAddressEditTextController = TextEditingController();
+  TextEditingController homeAddressEditTextController =
+      TextEditingController(text: "Kathmandu");
+  TextEditingController phoneController =
+      TextEditingController(text: "9810000000");
 
-  TextEditingController fullNameEditTextController1 = TextEditingController();
+  TextEditingController aboutController =
+      TextEditingController(text: "Software developer");
 
   @override
   Widget build(BuildContext context) {
@@ -86,17 +93,7 @@ class UserprofileScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 5.v),
-                        Container(
-                          height: 35.v,
-                          width: 315.h,
-                          margin: EdgeInsets.only(left: 5.h),
-                          decoration: BoxDecoration(
-                            color: appTheme.red50,
-                            borderRadius: BorderRadius.circular(
-                              5.h,
-                            ),
-                          ),
-                        ),
+                        _buildPhoneEditText(context),
                         SizedBox(height: 30.v),
                         Padding(
                           padding: EdgeInsets.only(left: 3.h),
@@ -125,6 +122,7 @@ class UserprofileScreen extends StatelessWidget {
                             style: theme.textTheme.titleSmall,
                           ),
                         ),
+                        _buildFullNameEditText1(context)
                       ],
                     ),
                   ),
@@ -133,7 +131,6 @@ class UserprofileScreen extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: _buildFullNameEditText1(context),
       ),
     );
   }
@@ -206,6 +203,16 @@ class UserprofileScreen extends StatelessWidget {
   }
 
   /// Section Widget
+  Widget _buildPhoneEditText(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 5.h),
+      child: CustomTextFormField(
+        controller: phoneController,
+      ),
+    );
+  }
+
+  /// Section Widget
   Widget _buildHomeAddressEditText(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: 5.h),
@@ -219,12 +226,13 @@ class UserprofileScreen extends StatelessWidget {
   Widget _buildFullNameEditText1(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        left: 48.h,
-        right: 43.h,
+        left: 5.h,
+        top: 4,
+        // right: 43.h,
         bottom: 36.v,
       ),
       child: CustomTextFormField(
-        controller: fullNameEditTextController1,
+        controller: aboutController,
         textInputAction: TextInputAction.done,
       ),
     );

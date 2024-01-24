@@ -4,12 +4,19 @@ import 'package:pankaj_s_application6/widgets/custom_elevated_button.dart';
 import 'package:pankaj_s_application6/widgets/custom_radio_button.dart';
 import 'package:pankaj_s_application6/widgets/custom_text_form_field.dart';
 
-class DonationreqformscreenScreen extends StatelessWidget {
+class DonationreqformscreenScreen extends StatefulWidget {
   DonationreqformscreenScreen({Key? key})
       : super(
           key: key,
         );
 
+  @override
+  State<DonationreqformscreenScreen> createState() =>
+      _DonationreqformscreenScreenState();
+}
+
+class _DonationreqformscreenScreenState
+    extends State<DonationreqformscreenScreen> {
   String doesThisRequestComeFromAnIndivRadioGroup = "";
 
   List<String> radioList = ["lbl_individual", "lbl_organization"];
@@ -244,7 +251,9 @@ class DonationreqformscreenScreen extends StatelessWidget {
                 groupValue: doesThisRequestComeFromAnIndivRadioGroup,
                 textStyle: theme.textTheme.bodyMedium,
                 onChange: (value) {
-                  doesThisRequestComeFromAnIndivRadioGroup = value;
+                  setState(() {
+                    doesThisRequestComeFromAnIndivRadioGroup = value;
+                  });
                 },
               ),
             ),
@@ -259,7 +268,9 @@ class DonationreqformscreenScreen extends StatelessWidget {
                 groupValue: doesThisRequestComeFromAnIndivRadioGroup,
                 textStyle: theme.textTheme.bodyMedium,
                 onChange: (value) {
-                  doesThisRequestComeFromAnIndivRadioGroup = value;
+                  setState(() {
+                    doesThisRequestComeFromAnIndivRadioGroup = value;
+                  });
                 },
               ),
             ),

@@ -257,8 +257,7 @@ class DashboardScreen extends StatelessWidget {
                               height: MediaQuery.of(context).size.height / 3,
                               decoration: ShapeDecoration(
                                 image: DecorationImage(
-                                  image: NetworkImage(
-                                      "https://via.placeholder.com/430x405"),
+                                  image: AssetImage(ImageConstant.dashimg2),
                                   fit: BoxFit.cover,
                                 ),
                                 shape: RoundedRectangleBorder(
@@ -334,16 +333,10 @@ class DashboardScreen extends StatelessWidget {
 
   Padding _buildCardlistWidget() {
     List<CardItem> cardItems = [
-      CardItem(
-          image: "https://via.placeholder.com/430x405", title: "Ways to Give"),
-      CardItem(
-          image: "https://via.placeholder.com/430x405",
-          title: 'Ways to get Involved'),
-      CardItem(
-          image: "https://via.placeholder.com/430x405",
-          title: 'More ways to Support'),
-      CardItem(
-          image: "https://via.placeholder.com/430x405", title: 'Your Impact'),
+      CardItem(image: ImageConstant.dashimg1, title: "Ways to Give"),
+      CardItem(image: ImageConstant.dashimg2, title: 'Ways to get Involved'),
+      CardItem(image: ImageConstant.dashimg2, title: 'More ways to Support'),
+      CardItem(image: ImageConstant.dashimg2, title: 'Your Impact'),
     ];
     return Padding(
       padding: EdgeInsets.all(8.h),
@@ -409,7 +402,7 @@ class CardListWidget extends StatelessWidget {
           height: 62,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: NetworkImage("https://via.placeholder.com/71x62"),
+              image: AssetImage(ImageConstant.dashimg3),
               fit: BoxFit.fill,
             ),
           ),
